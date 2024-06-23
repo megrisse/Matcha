@@ -1,6 +1,9 @@
 ## Matcha
 
 
-# Front 
+# Front
+Install dependencies:
+```Bash
  cd front
- npm i //to intall packages
+ npm i
+ ```
