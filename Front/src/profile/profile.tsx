@@ -1,12 +1,10 @@
 import SideBarr from "../Components/SideBar";
 
-
 function Profile() {
   return (
-
-  <div>
-    <SideBarr />
-  </div>
+    <div>
+      <SideBarr />
+    </div>
   );
 }
 

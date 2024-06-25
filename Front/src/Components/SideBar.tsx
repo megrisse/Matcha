@@ -1,5 +1,4 @@
-import React from 'react'
-import * as Components from "./Components"
+import * as Components from "./Components";
 import logopath from "../assets/logo.svg";
 import profilePath from "../assets/profile.svg";
 import messagePath from "../assets/message.svg";
@@ -35,7 +34,7 @@ function SideBarr() {
         </Components.LogoutButtonContainer>
       </Components.SideBar>
     </Components.SideBarContainer>
-  )
+  );
 }
 
-export default SideBarr
+export default SideBarr;

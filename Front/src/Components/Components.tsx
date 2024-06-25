@@ -180,7 +180,7 @@ export const Paragraph = styled.p`
 `;
 
 export const SideBarContainer = styled.div`
-	height: 100vh; 
+  height: 100vh;
 `;
 
 export const SideBar = styled.nav`
@@ -209,7 +209,7 @@ export const Logo = styled.img`
   width: auto;
   border-width: 2px;
   border-style: solid;
-  border-color: #FFC0CB;
+  border-color: #ffc0cb;
   border-radius: 50%;
 `;
 
@@ -229,9 +229,7 @@ export const SideBarList = styled.ul`
   flex-direction: column;
 `;
 
-export const SideBarListItem = styled.li`
-  
-`;
+export const SideBarListItem = styled.li``;
 
 export const SideBarListAnchor = styled.a`
   display: flex;
@@ -251,7 +249,7 @@ export const SideBarListAnchor = styled.a`
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -2px;
     left: -2px;
@@ -263,7 +261,7 @@ export const SideBarListAnchor = styled.a`
   }
 
   &:hover::after {
-    border-color: #FFC0CB;
+    border-color: #ffc0cb;
   }
 `;
 
@@ -274,7 +272,8 @@ export const SideBarListImage = styled.img`
   filter: invert(50%);
 
   ${SideBarListAnchor}:hover & {
-    filter: invert(75%) sepia(11%) saturate(1094%) hue-rotate(300deg) brightness(100%) contrast(97%);
+    filter: invert(75%) sepia(11%) saturate(1094%) hue-rotate(300deg)
+      brightness(100%) contrast(97%);
   }
 `;
 
@@ -283,5 +282,5 @@ export const LogoutButtonContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-	margin-bottom: 50px;
+  margin-bottom: 50px;
 `;
