@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface SignProps {
   signinIn?: boolean;
@@ -27,12 +27,14 @@ export const SignUpContainer = styled.div<SignProps>`
   width: 50%;
   opacity: 0;
   z-index: 1;
-  ${props => props.signinIn !== true ? `
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 5;
-  ` 
-  : null}
+  ${(props) =>
+    props.signinIn !== true
+      ? `
+		transform: translateX(100%);
+		opacity: 1;
+		z-index: 5;
+	`
+      : null}
 `;
 
 export const SignInContainer = styled.div<SignProps>`
@@ -43,7 +45,8 @@ export const SignInContainer = styled.div<SignProps>`
   left: 0;
   width: 50%;
   z-index: 2;
-  ${props => (props.signinIn !== true ? `transform: translateX(100%);` : null)}
+  ${(props) =>
+    props.signinIn !== true ? `transform: translateX(100%);` : null}
 `;
 
 export const Form = styled.form`
@@ -72,8 +75,8 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   border-radius: 20px;
-  border: 1px solid #FFC0CB;
-  background-color: #FFC0CB;
+  border: 1px solid #ffc0cb;
+  background-color: #ffc0cb;
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -92,6 +95,10 @@ export const Button = styled.button`
 export const GhostButton = styled(Button)`
   background-color: transparent;
   border-color: #ffffff;
+
+  &:hover {
+    box-shadow: 0 0 4px;
+  }
 `;
 
 export const Anchor = styled.a`
@@ -117,14 +124,14 @@ export const OverlayContainer = styled.div<SignProps>`
   overflow: hidden;
   transition: transform 0.6s ease-in-out;
   z-index: 100;
-  ${props =>
+  ${(props) =>
     props.signinIn !== true ? `transform: translateX(-100%);` : null}
 `;
 
 export const Overlay = styled.div<SignProps>`
-  background: #ADD8E6;
-  background: -webkit-linear-gradient(to right, #FFC0CB, #ADD8E6);
-  background: linear-gradient(to right, #FFC0CB, #ADD8E6);
+  background: #add8e6;
+  background: -webkit-linear-gradient(to right, #ffc0cb, #add8e6);
+  background: linear-gradient(to right, #ffc0cb, #add8e6);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -135,7 +142,7 @@ export const Overlay = styled.div<SignProps>`
   width: 200%;
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
-  ${props => (props.signinIn !== true ? `transform: translateX(50%);` : null)}
+  ${(props) => (props.signinIn !== true ? `transform: translateX(50%);` : null)}
 `;
 
 export const OverlayPanel = styled.div`
@@ -154,22 +161,14 @@ export const OverlayPanel = styled.div`
 `;
 
 export const LeftOverlayPanel = styled(OverlayPanel)<SignProps>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   transform: translateX(-20%);
-  ${props => props.signinIn !== true ? `transform: translateX(0);` : null}
+  ${(props) => (props.signinIn !== true ? `transform: translateX(0);` : null)}
 `;
 
 export const RightOverlayPanel = styled(OverlayPanel)<SignProps>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   right: 0;
   transform: translateX(0);
-  ${props => props.signinIn !== true ? `transform: translateX(20%);` : null}
+  ${(props) => (props.signinIn !== true ? `transform: translateX(20%);` : null)}
 `;
 
 export const Paragraph = styled.p`
@@ -178,4 +177,111 @@ export const Paragraph = styled.p`
   line-height: 20px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
+`;
+
+export const SideBarContainer = styled.div`
+	height: 100vh; 
+`;
+
+export const SideBar = styled.nav`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 5vw;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+`;
+
+export const LogoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+
+export const Logo = styled.img`
+  height: 30px;
+  width: auto;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #FFC0CB;
+  border-radius: 50%;
+`;
+
+export const SideBarListContainer = styled.div`
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const SideBarList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const SideBarListItem = styled.li`
+  
+`;
+
+export const SideBarListAnchor = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+  position: relative;
+
+  &:hover {
+    background-color: rgba(255, 192, 203, 0.2);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  &:hover::after {
+    border-color: #FFC0CB;
+  }
+`;
+
+export const SideBarListImage = styled.img`
+  height: 30px;
+  width: auto;
+  transition: all 0.3s ease;
+  filter: invert(50%);
+
+  ${SideBarListAnchor}:hover & {
+    filter: invert(75%) sepia(11%) saturate(1094%) hue-rotate(300deg) brightness(100%) contrast(97%);
+  }
+`;
+
+export const LogoutButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+	margin-bottom: 50px;
 `;
