@@ -4,17 +4,20 @@ export const ProfileCard = styled.div`
   background-color: #fff;
   border-width: 2px;
   border-style: solid;
-  border-radius: 10px;
-  border-color: black
+  border-radius: 20px;
+  border-color: black;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   text-align: center;
-  width: 30vw;
+  width: 400px;
   height: 70vh;
+  max-width: 100%;
+  max-height: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  gap: 15px;
 `;
 
 export const ProfileInfosContainer = styled.div`
@@ -24,6 +27,7 @@ export const ProfileInfosContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: auto;
 `;
 
 export const ProfileImage = styled.img`
@@ -35,15 +39,16 @@ export const ProfileImage = styled.img`
 `;
 
 export const InputField = styled.input`
-  width: 80%;
+  width: 70%;
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
 `;
 
 export const TextAreaField = styled.textarea`
-  width: 80%;
+  width: 70%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
@@ -59,12 +64,13 @@ export const AgeContainer = styled.div`
 `;
 
 export const AgeInput = styled.input`
-  width: 30px;
+  width: 15%;
   padding: 10px;
   margin: 0 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  text-align: left;
 `;
 
 export const SubmitButton = styled.button`
@@ -77,7 +83,7 @@ export const SubmitButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    drop-shadow: #ADD8E6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 `;
 
@@ -85,20 +91,34 @@ export const ProfileImagesCard = styled.div`
   background-color: #fff;
   border-width: 2px;
   border-style: solid;
-  border-radius: 10px;
+  border-radius: 20px;
   border-color: black;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 40vw;
+  width: 600px;
   height: 35vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
 `;
 
 export const ProfileInterestCard = styled.div`
   background-color: #fff;
   border-width: 2px;
   border-style: solid;
-  border-radius: 10px;
+  border-radius: 20px;
   border-color: black;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 40vw;
+  width: 600px;
   height: 35vh;
+`;
+
+export const ProfileImagesCardImage = styled.img`
+  background-color: #9C9C9C;
+  border-width: 2px;
+  border-style: dashed;
+  border-color: black;
+  width: calc(33.333% - 10px);
+  height: auto;
+  border-radius: 8px;
 `;

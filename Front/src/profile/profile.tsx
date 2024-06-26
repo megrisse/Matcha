@@ -9,11 +9,14 @@ function Profile() {
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-around",
-        height: "100vh",
+        height: "100%",
+        width: "100%",
         gap: "100px",
       }}
     >
+      <>
       <SideBarr />
+      </>
       <div
         className="profile-info-card"
         style={{
@@ -23,8 +26,8 @@ function Profile() {
         }}
       >
         <Components.ProfileCard>
+          <Components.ProfileImage src={Profileimg} alt="img" />
           <Components.ProfileInfosContainer>
-            <Components.ProfileImage src={Profileimg} alt="img" />
             <Components.InputField type="text" placeholder="First Name" />
             <Components.InputField type="text" placeholder="Last Name" />
             <Components.AgeContainer>
@@ -38,6 +41,7 @@ function Profile() {
                 maxLength={2}
                 placeholder="MM"
               />
+              <label htmlFor="year"></label>
               <Components.AgeInput
                 type="number"
                 maxLength={4}
@@ -45,12 +49,12 @@ function Profile() {
               />
             </Components.AgeContainer>
             <Components.TextAreaField placeholder="About" />
-            <Components.SubmitButton>Save</Components.SubmitButton>
           </Components.ProfileInfosContainer>
+          <Components.SubmitButton>Save</Components.SubmitButton>
         </Components.ProfileCard>
       </div>
       <div
-        className=""
+        className="interst-photos-card"
         style={{
           display: "flex",
           flexDirection: "column",
@@ -58,7 +62,13 @@ function Profile() {
           gap: "30px",
         }}
       >
-        <Components.ProfileImagesCard />
+        <Components.ProfileImagesCard>
+          <Components.ProfileImagesCardImage />
+          <Components.ProfileImagesCardImage />
+          <Components.ProfileImagesCardImage />
+          <Components.ProfileImagesCardImage />
+          <Components.ProfileImagesCardImage />
+        </Components.ProfileImagesCard>
         <Components.ProfileInterestCard />
       </div>
     </div>

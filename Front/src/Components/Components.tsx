@@ -161,12 +161,14 @@ export const OverlayPanel = styled.div`
 `;
 
 export const LeftOverlayPanel = styled(OverlayPanel)<SignProps>`
+  padding: 0;
   transform: translateX(-20%);
   ${(props) => (props.signinIn !== true ? `transform: translateX(0);` : null)}
 `;
 
 export const RightOverlayPanel = styled(OverlayPanel)<SignProps>`
   right: 0;
+  padding: 0;
   transform: translateX(0);
   ${(props) => (props.signinIn !== true ? `transform: translateX(20%);` : null)}
 `;
@@ -189,7 +191,7 @@ export const SideBar = styled.nav`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 5vw;
+  width: 50px;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 20px;
   position: fixed;

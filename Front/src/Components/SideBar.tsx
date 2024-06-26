@@ -28,7 +28,7 @@ function SideBarr() {
           </Components.SideBarList>
         </Components.SideBarListContainer>
         <Components.LogoutButtonContainer className="logout-container">
-          <Components.SideBarListAnchor>
+          <Components.SideBarListAnchor href="/Profile/?">
             <Components.SideBarListImage src={logoutpath} alt="logout" />
           </Components.SideBarListAnchor>
         </Components.LogoutButtonContainer>
