@@ -15,14 +15,14 @@ function SideBarr() {
         <Components.SideBarListContainer className="sidebar-list-container">
           <Components.SideBarList>
             <Components.SideBarListItem className="sidebarlist-item">
-              <Components.SideBarListAnchor>
+              <Components.SideBarListAnchor href="/Profile">
                 <Components.SideBarListImage src={profilePath} alt="profile" />
               </Components.SideBarListAnchor>
-              <Components.SideBarListAnchor>
+              <Components.SideBarListAnchor href="/Chat">
                 <Components.SideBarListImage src={messagePath} alt="message" />
               </Components.SideBarListAnchor>
-              <Components.SideBarListAnchor>
-                <Components.SideBarListImage src={settingpath} alt="settong" />
+              <Components.SideBarListAnchor href="Settings">
+                <Components.SideBarListImage src={settingpath} alt="settings" />
               </Components.SideBarListAnchor>
             </Components.SideBarListItem>
           </Components.SideBarList>

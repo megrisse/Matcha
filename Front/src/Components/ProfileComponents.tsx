@@ -98,6 +98,7 @@ export const ProfileImagesCard = styled.div`
   height: 35vh;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   padding: 20px;
 `;
@@ -113,12 +114,21 @@ export const ProfileInterestCard = styled.div`
   height: 35vh;
 `;
 
-export const ProfileImagesCardImage = styled.img`
+export const ProfileImagesCardImage = styled.div`
   background-color: #9C9C9C;
   border-width: 2px;
   border-style: dashed;
   border-color: black;
-  width: calc(33.333% - 10px);
-  height: auto;
+  width: calc(25% - 10px);
+  margin: 5px;
+  aspect-ratio: 1;
   border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+`;
+
+export const ProfileImages = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
