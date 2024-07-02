@@ -76,7 +76,7 @@ export const AgeInput = styled.input`
 export const SubmitButton = styled.button`
   padding: 10px 20px;
   margin-top: 20px;
-  background-color: #ADD8E6;
+  background-color: #5E9DB8;
   color: #fff;
   border: none;
   border-radius: 10px;

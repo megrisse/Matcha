@@ -59,7 +59,7 @@ const Input = styled.input`
 `;
 
 const AddButton = styled.button`
-background-color: #ADD8E6;
+background-color: #5E9DB8;
   color: white;
   border: none;
   padding: 10px 20px;
