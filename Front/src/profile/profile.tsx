@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { ProfileImagesCardComponent } from "../Components/ProfileImagesCard";
 import * as Components from "../Components/ProfileComponents";
